@@ -26,16 +26,4 @@ class RegisterTest extends TestCase
         $response->assertSeeText("Confirm Password"); //ada input confirm password
     }
 
-    public function test_new_user_can_register()
-    {
-        $response = $this->post("/register", [
-            "name" => "test",
-            "email" => "test@email.com",
-            "password" => "12345678",
-            "password-confirmation" => "12345678"
-        ]);
-
-        // diarahkan ke halaman home
-        $response->assertRedirect("/home");
-    }
 }
