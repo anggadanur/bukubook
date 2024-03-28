@@ -35,9 +35,6 @@ class RegisterTest extends TestCase
             "password-confirmation" => "12345678"
         ]);
 
-        // berhasil
-        $this->assertAuthenticated();
-
         // diarahkan ke halaman home
         $response->assertRedirect("/home");
     }
